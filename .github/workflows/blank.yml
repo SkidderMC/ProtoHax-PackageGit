@@ -1,10 +1,10 @@
-name: Publish Packages
+name: Upload Packages
 
 on:
   push
 
 jobs:
-  build_and_publish:
+  upload:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,10 +16,17 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-          settings-path: ${{ github.workspace }} # location for the settings.xml file
+          server-id: github
+          settings-path: ${{ github.workspace }}
 
-      - name: Publish to GitHub Packages
-        run: mvn deploy
+      - name: Upload minecraft-msftauth package
+        run: |
+          mvn deploy:deploy-file -Dfile=path/to/minecraft-msftauth-2.1.6.jar -DpomFile=path/to/minecraft-msftauth-2.1.6.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/OWNER/REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload libmitm package
+        run: |
+          mvn deploy:deploy-file -Dfile=path/to/libmitm-1.2.3-raknet.aar -DpomFile=path/to/libmitm-1.2.3-raknet.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/OWNER/REPOSITORY
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
