@@ -23,12 +23,12 @@ jobs:
 
       - name: Upload minecraft-msftauth package
         run: |
-          mvn deploy:deploy-file -Dfile=coelho.msftauth/minecraft-msftauth/2.1.6/3e97bee0da5e47cf7b7c567e2271a2a57b92bc6e/minecraft-msftauth-2.1.6.jar -DpomFile=coelho.msftauth/minecraft-msftauth/2.1.6/6555743316beda84b92d468c68b5bd101fbf0a87/minecraft-msftauth-2.1.6.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/OWNER/REPOSITORY
+          mvn deploy:deploy-file -Dfile=coelho.msftauth/minecraft-msftauth/2.1.6/3e97bee0da5e47cf7b7c567e2271a2a57b92bc6e/minecraft-msftauth-2.1.6.jar -DpomFile=coelho.msftauth/minecraft-msftauth/2.1.6/6555743316beda84b92d468c68b5bd101fbf0a87/minecraft-msftauth-2.1.6.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/SkidderMC/ProtoHax-PackageGit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload libmitm package
         run: |
-          mvn deploy:deploy-file -Dfile=dev.sora.networking/libmitm/1.2.3-raknet/ce1b60a4ad10ac9b0610bf5a9774a6c01c60fa58/libmitm-1.2.3-raknet.aar -DpomFile=dev.sora.networking/libmitm/1.2.3-raknet/afce312565aa3b22fc520136edee843ffdf73f20/libmitm-1.2.3-raknet.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/OWNER/REPOSITORY
+          mvn deploy:deploy-file -Dfile=dev.sora.networking/libmitm/1.2.3-raknet/ce1b60a4ad10ac9b0610bf5a9774a6c01c60fa58/libmitm-1.2.3-raknet.aar -DpomFile=dev.sora.networking/libmitm/1.2.3-raknet/afce312565aa3b22fc520136edee843ffdf73f20/libmitm-1.2.3-raknet.pom -DrepositoryId=github -Durl=https://maven.pkg.github.com/SkidderMC/ProtoHax-PackageGit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
