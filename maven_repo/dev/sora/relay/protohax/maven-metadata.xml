@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>dev.sora.relay</groupId>
-  <artifactId>ProtoHax</artifactId>
+  <artifactId>protoHax</artifactId>
   <versioning>
     <latest>1.4.0</latest>
     <release>1.4.0</release>
