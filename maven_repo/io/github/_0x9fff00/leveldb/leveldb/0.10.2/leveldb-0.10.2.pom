@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>io.github._0x9fff00.leveldb</groupId>
-        <artifactId>leveldb-project</artifactId>
+        <artifactId>leveldb</artifactId>
         <version>0.10.2</version>
     </parent>
 
