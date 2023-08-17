@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>dev.sora.relay</groupId>
+  <artifactId>ProtoHax</artifactId>
+  <versioning>
+    <latest>1.4.0</latest>
+    <release>1.4.0</release>
+    <versions>
+      <version>1.4.0</version>
+    </versions>
+    <lastUpdated>20230817135844</lastUpdated>
+  </versioning>
+</metadata>
